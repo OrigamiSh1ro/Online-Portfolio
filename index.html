@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>Zen Gavierez | Portfolio</title>
+
+    <style>
+
+/*HEADER*/
+
+.dark-mode {
+  background-color: rgb(8, 8, 8);
+  color: white;
+}
+
+header {  
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+ 
+}
+
+.navilog{
+    height: 10dvh;
+    width: 10dvh;
+    margin-top: 1.5dvh;
+    margin-right: 2dvh;
+    border: 1px solid;
+}
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+
+#navibar{
+    display: flex;
+    justify-content:start;
+    padding-left: 2dvh;
+    background-color:purple ;
+}
+
+.navbar .links {
+    
+    display: flex;
+    gap: 3rem;
+    font-weight: 500;
+}
+h2.links{
+    
+    list-style-type: none;
+    display: flex;
+    justify-content:space-around;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 5px 10px;
+}
+a{ 
+   
+    width: 25dvh;
+    height: 10dvh;
+}
+/* HOME*/
+div.container{
+    display: flex;
+    justify-content: start;
+    margin-left: 2dvh;
+    margin-right: 2dvh;
+    border-radius: 1rem;
+    margin-top: 15dvh;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background-color: #bd3fa8 ;
+}
+
+
+.leftdiv{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2dvh;
+    padding-right: 2dvh;
+}
+
+#pic{
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+    height: 60dvh;
+    width: 60dvh;
+    margin-right: 2dvh;
+}
+
+p.intro{
+    color: rgb(45, 46, 63);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    padding-left: 5dvh;
+}
+p.name{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    padding-left: 5dvh;
+}
+p.title{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self: flex-start;
+    padding-left: 5dvh;
+
+}
+p.about{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self: flex-start;
+    padding-left: 5dvh;
+    padding-right: 4dvh;
+}
+span{
+    color: rgb(43, 3, 82);
+}
+
+.reference{
+    margin-left: 20dvh;
+}
+#dl_btn{
+    border-radius: 1rem;
+    box-shadow: 5px 10px;
+}
+#ct_btn{
+    border-radius: 1rem;
+    box-shadow: 5px 10px;
+}
+img.selfport{
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px ;
+    margin-left: 2dvh;
+    height: 60dvh;
+    width: 45dvh;
+}
+div.icons{
+    margin-left: 5dvh;
+    margin-top: 5dvh;
+    margin-bottom: 5dvh;
+    height: 15dvh;
+    width: 15dvh;
+    display: flex;
+    align-content: space-around;
+}
+footer{
+    display: flex;
+    align-content: space-around;
+}
+    </style>
+
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header id="main-head">
+        <div id="navibar">
+            <div class="logo">
+                
+                <img class="navilog" src="logo.jpg" alt="Logo">
+               
+            </div>
+
+            <h2 class="links">
+                <a href="#home" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> HOME </a>
+                <a href="#about" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> ABOUT </a>
+                <a href="#projects" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> PROJECTS </a>
+                <a href="#contact" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> CONTACT </a>
+                <button onclick="myFunction()" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link">Night mode</button>
+            </h2>
+            
+        </div>
+    </header>
+
+
+    <!--HOME-->
+    <section id="home">
+        <div class="container">
+            <div class="leftdiv"><strong>
+                <p class="intro "> Hi Welcome I'm</p>
+                <p class="name" >Zen Arthur A. Gavierez</p>
+                <p class="title">I'm a <span>College Student</span></p>
+                <p class="about">With the great learning experiences from my former mentors and peers, and knowledge about proper discipline with technology. I can be fully motivated to work on task that will revolve in defending clients from threats and being able to help them resolve issues with my experience with Cyber Security. And a mug of double shot espresso and lack of sleep, I will always be at your service.</p>
+                
+                <div class="reference">
+                    <a href="resume.pdf" id="dl_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link" download>Download</a>
+                    <a href="#contact" id="ct_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link">Contact</a>
+                </div></strong>
+            </div>
+            <div class="rightdiv">
+                <img id="pic" src="maemi.png">
+            </div>
+            
+        </div>
+    </section>
+    <!--about info-->
+    <section id="about">
+        <div class="container">
+
+            <div class="about_leftDiv">
+                <img class="selfport" src="self.png">
+            </div>
+            <div class="about_rightDiv"><strong>
+                <p class="intro "> Hi Welcome I'm</p>
+                <p class="name" >Zen Arthur A. Gavierez</p>
+                <p class="title">I'm a <span>College Student</span></p>
+                <p class="about">My motivations is to improving my web development skills and programming skills as a 
+                    3rd year college student to further give me insight into Information Technology. I hope to give myself more knowledge into the course by 
+                properly initiating myself into a better workflow and learning habit, so that i can be able to graduate as a proper Web Developer and CyberSecurity Administrator in the future. 
+                    
+                I am currently working on further improving my programming skills as well as progressing my knowledge in cyber security through various courses and accreditaions. 
+            </p>
+                
+                <div class="icons">
+                    <img src="html.png" >
+                    <img src="css.png" >
+                    <img src="js.png" >
+                    <img src="cisco.png" >
+                   
+                </div>
+                <div class="reference">
+                    <a href="resume.pdf" id="dl_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link" download>Download</a>
+                    <a href="#contact" id="ct_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link">Contact</a>
+                </div>
+                </strong>
+            </div>
+
+        </div>
+    </section>
+    <!--Projects-->
+    <section id="Projects">
+        <div class="container">
+            
+        </div>
+    </section>
+    <!--Contact info-->
+    <section id="contact">
+        <div class="container">
+            
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">Copyright © 2024 | All Rights Reserved | </p>
+        <p class="developer">Developed by <a href="https://github.com/OrigamiSh1ro" target="_blank">Zen Arthur A. Gavierez</a></p>
+    </footer>
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+</body>
+</html>
