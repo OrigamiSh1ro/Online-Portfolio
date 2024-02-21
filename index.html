@@ -9,66 +9,146 @@
 
     <style>
 
-/*HEADER*/
+/*HEADER*/   
 
 .dark-mode {
-  background-color: rgb(8, 8, 8);
-  color: white;
+  background-color: black;
+  color: rgb(8, 8, 8);
+  transition: .5s;
 }
-
+.nav.dark-mode {
+    background-color: black;
+    color: #fff;
+    transition: .5s;
+    
+}
 header {  
     position: fixed;
     top: 0;
     background-color: transparent;
-    width: 100%;
- 
+    width: 100%;   
 }
-
+body{
+    background-color: white;
+    color: black;
+    transition: .5s;
+}
 .navilog{
-    height: 10dvh;
-    width: 10dvh;
+    height: 11dvh;
+    width: 11dvh;
     margin-top: 1.5dvh;
     margin-right: 2dvh;
     border: 1px solid;
+    z-index: 2;
 }
-.navbar {
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    
-    justify-content: space-between;
-    
-}
-
 #navibar{
     display: flex;
     justify-content:start;
     padding-left: 2dvh;
-    background-color:purple ;
-}
-
-.navbar .links {
     
+}
+.navigation{
+    background-color:purple ;
+    transition: .5s;
+}
+.navigation.dark-mode {
+    background-color: black;
+    color: #645a5a;
+    transition: .5s;
+        }
+.navbar .links {
+    z-index: 2;
     display: flex;
     gap: 3rem;
     font-weight: 500;
 }
+.sections{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: sticky;
+}
+
 h2.links{
     
     list-style-type: none;
     display: flex;
     justify-content:space-around;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    box-shadow: 5px 10px;
+    
 }
-a{ 
-   
+a.navi{
     width: 25dvh;
     height: 10dvh;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:black;background-color:white;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+a.navi:hover{
+    width: 25dvh;
+    height: 10dvh;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:white;background-color:purple;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button.nav{
+    width: 25dvh;
+    height: 10dvh;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:black;background-color:white;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: .5;
+}
+button.nav:hover{width: 25dvh;
+    height: 10dvh;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:white;background-color:rgb(236, 206, 34);
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;}
 /* HOME*/
-div.container{
+#container{
     display: flex;
     justify-content: start;
     margin-left: 2dvh;
@@ -77,26 +157,46 @@ div.container{
     margin-top: 15dvh;
     padding-top: 2dvh;
     padding-bottom: 2dvh;
-    background-color: #bd3fa8 ;
 }
-
-
+.homepage{
+    background-color: #bd3fa8 ;
+    transition: .5s;
+}
+.homepage.dark-mode{
+    background-color:black;
+    color: black;
+    transition: .5s;
+}
+.contentbox{
+    background-color: #bd3fa8 ;
+    transition: .5s;
+}
+.contentbox.dark-mode{
+    background-color: rgb(20, 19, 19);
+    color: black;
+    transition: .5s;
+}
 .leftdiv{
     display: flex;
     flex-direction: column;
     padding-left: 2dvh;
     padding-right: 2dvh;
 }
-
 #pic{
     border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px;
-    height: 60dvh;
-    width: 60dvh;
+    height: 95%;
+    width:  95%;
     margin-right: 2dvh;
+   
 }
-
+.maemi{
+    background-color: purple;
+}
+.maemi.dark-mode{
+    background-color: rgb(20, 19, 19);
+}
 p.intro{
     color: rgb(45, 46, 63);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -114,6 +214,7 @@ p.title{
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-self: flex-start;
     padding-left: 5dvh;
+    font-size: large;
 
 }
 p.about{
@@ -125,8 +226,8 @@ p.about{
 }
 span{
     color: rgb(43, 3, 82);
+    font-size: large;
 }
-
 .reference{
     margin-left: 20dvh;
 }
@@ -138,13 +239,23 @@ span{
     border-radius: 1rem;
     box-shadow: 5px 10px;
 }
-img.selfport{
+.selfport{
     border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px ;
     margin-left: 2dvh;
-    height: 60dvh;
-    width: 45dvh;
+    height:  95%;
+    width:  95%;
+    background-color:purple ;
+}
+.selfport.dark-mode{
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px ;
+    margin-left: 2dvh;
+    height:  95%;
+    width:  95%;
+    background-color: white;
 }
 div.icons{
     margin-left: 5dvh;
@@ -160,12 +271,11 @@ footer{
     align-content: space-around;
 }
     </style>
-
 </head>
 <body>
     <!--NAVIGATION BAR-->
     <header id="main-head">
-        <div id="navibar">
+        <div id="navibar" class="navigation">
             <div class="logo">
                 
                 <img class="navilog" src="logo.jpg" alt="Logo">
@@ -173,20 +283,20 @@ footer{
             </div>
 
             <h2 class="links">
-                <a href="#home" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> HOME </a>
-                <a href="#about" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> ABOUT </a>
-                <a href="#projects" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> PROJECTS </a>
-                <a href="#contact" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link"> CONTACT </a>
-                <button onclick="myFunction()" class="w3-button w3-hover-purple w3-large w3-xlarge w3-white link">Night mode</button>
+                <button onclick="scrollToTarget('homebtn')" class="nav"> HOME </button>
+                <button onclick="scrollToTarget('aboutbtn')" class="nav"> ABOUT </button>
+                <button onclick="scrollToTarget('projectsbtn')" class="nav"> PROJECTS </button>
+                <button onclick="scrollToTarget('contactbtn')" class="nav"> CONTACT </button>
+                <button onclick="toggleMode()" class="nav" id="mode">Day mode</button>
             </h2>
             
         </div>
     </header>
-
+<br>
 
     <!--HOME-->
     <section id="home">
-        <div class="container">
+        <div class="homepage" id="container">
             <div class="leftdiv"><strong>
                 <p class="intro "> Hi Welcome I'm</p>
                 <p class="name" >Zen Arthur A. Gavierez</p>
@@ -194,19 +304,20 @@ footer{
                 <p class="about">With the great learning experiences from my former mentors and peers, and knowledge about proper discipline with technology. I can be fully motivated to work on task that will revolve in defending clients from threats and being able to help them resolve issues with my experience with Cyber Security. And a mug of double shot espresso and lack of sleep, I will always be at your service.</p>
                 
                 <div class="reference">
-                    <a href="resume.pdf" id="dl_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link" download>Download</a>
-                    <a href="#contact" id="ct_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link">Contact</a>
+                    <a href="resume.pdf" id="dl_btn" class="navi" download>Download</a>
+                    <a href="#contact" id="ct_btn" class="navi">Contact</a>
                 </div></strong>
             </div>
             <div class="rightdiv">
-                <img id="pic" src="maemi.png">
+                <img id="pic" class="maemi" src="maemi.png">
             </div>
             
         </div>
     </section>
+    <br>
     <!--about info-->
     <section id="about">
-        <div class="container">
+        <div class="contentbox" id="container">
 
             <div class="about_leftDiv">
                 <img class="selfport" src="self.png">
@@ -230,23 +341,25 @@ footer{
                    
                 </div>
                 <div class="reference">
-                    <a href="resume.pdf" id="dl_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link" download>Download</a>
-                    <a href="#contact" id="ct_btn" class="w3-button w3-hover-purple w3-large w3-medium w3-white link">Contact</a>
+                    <a href="resume.pdf" id="dl_btn" class="navi" download>Download</a>
+                    <a href="#contact" id="ct_btn" class="navi">Contact</a>
                 </div>
                 </strong>
             </div>
 
         </div>
     </section>
+    <br>
     <!--Projects-->
-    <section id="Projects">
-        <div class="container">
+    <section id="projects">
+        <div class="contentbox" id="container">
             
         </div>
     </section>
+    <br>
     <!--Contact info-->
     <section id="contact">
-        <div class="container">
+        <div class="contentbox" id="container">
             
         </div>
     </section>
@@ -255,10 +368,49 @@ footer{
         <p class="developer">Developed by <a href="https://github.com/OrigamiSh1ro" target="_blank">Zen Arthur A. Gavierez</a></p>
     </footer>
     <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
+
+// function to navigate page instead of hyperlink because i dont know how to change css attribute of hyperlink so i used buttons 
+        function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+        function scrollToTarget(buttonId) {
+      if (buttonId === 'homebtn') {
+        scrollToSection('home');
+      } else if (buttonId === 'aboutbtn') {
+        scrollToSection('about');
+      } else if (buttonId === 'projectsbtn') {
+        scrollToSection('projects');
+      } else if (buttonId === 'contactbtn') {
+        scrollToSection('contact');
+      }
+    }
+
+// function to toggle dark mode, 
+function toggleMode() {
+    const body = document.body;
+    const buttons = document.querySelectorAll('.nav');
+    const navibar = document.getElementById('navibar'); 
+    const homepage = document.querySelectorAll('.homepage'); 
+    const contentbox = document.querySelectorAll('.contentbox'); 
+    const pic = document.querySelectorAll('.maemi');
+    const portrait = document.querySelectorAll('.selfport');
+
+    body.classList.toggle('dark-mode');
+    buttons.forEach(button => button.classList.toggle('dark-mode'));
+    navibar.classList.toggle('dark-mode'); 
+    homepage.forEach(homepage => homepage.classList.toggle('dark-mode')); 
+    contentbox.forEach(contentbox => contentbox.classList.toggle('dark-mode')); 
+    pic.forEach(img => img.classList.toggle('dark-mode'));
+    portrait.forEach(img => img.classList.toggle('dark-mode'));
+
+    if (body.classList.contains('dark-mode')) {
+        document.getElementById('mode').innerText = 'Night mode';
+    } else {
+        document.getElementById('mode').innerText = 'Day mode';
+    }
+}
+    </script>
         </script>
 </body>
 </html>
