@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Zen Gavierez | Portfolio</title>
+   
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header id="main-head">
+        <div id="navibar" class="navigation" >
+            <div class="logo">
+                <nav class="links" >
+                    <img class="navilog" src="images/logo.png" alt="Logo" >
+                    <button onclick="scrollToTarget('homebtn')" class="nav"> HOME </button>
+                    <button onclick="scrollToTarget('aboutbtn')" class="nav"> ABOUT </button>
+                    <button onclick="scrollToTarget('projectsbtn')" class="nav"> PROJECTS </button>
+                    <button onclick="scrollToTarget('contactbtn')" class="nav"> CONTACT </button>
+                    <button onclick="toggleMode()" class="nav" id="mode">Day mode</button>
+                </nav>
+            </div>
+        </div>
+<!-- hidden-->
+        <div class="collapsed_links" > 
+            <section>
+                <img class="navilog2" src="images/logo.png" alt="Logo" >    
+            </section>   
+            <section class="☰_nav">
+                <button onclick="toggle_nav()" class="nav" id="tgnav"> ☰ </button></li>
+            </section>       
+            <section>
+                
+                <ul class="hiden" id="navList">
+                    <li><button onclick="scrollToTarget('homebtn')" class="nav"> HOME </button></li>
+                    <li><button onclick="scrollToTarget('aboutbtn')" class="nav"> ABOUT </button></li>
+                    <li><button onclick="scrollToTarget('projectsbtn')" class="nav"> PROJECTS </button></li>
+                    <li><button onclick="scrollToTarget('contactbtn')" class="nav"> CONTACT </button></li>
+                    <li><button onclick="toggleMode()" class="nav" id="mode">Day mode</button></li>
+                </ul>
+            </section>
+            
+        </div>
+    </header>
+<br>
+    <!--HOME-->
+    <section id="home">
+        <section class="homepage" id="container">
+            <section class="leftdiv">                  
+                    <section class="homediv">
+                        <strong>
+                            <p class="intro "> Hi, Welcome I'm</p>
+                            <p class="name" >Zen Arthur A. Gavierez</p>
+                            <p class="title">I'm a <span class="jt">College Student</span></p>
+                            <p class="about">With the great learning experiences from my former mentors and peers, and knowledge about proper discipline with technology. I can be fully motivated to work on task that will revolve in defending clients from threats and being able to help them resolve issues with my experience with Cyber Security. And a mug of double shot espresso and lack of sleep, I will always be at your service.</p>                      
+                        </strong>
+                    </section>
+                    <section class="homepic">
+                        <img id="pic" class="maemi" src="images/maemi.png">
+                    </section>         
+            </section>    
+                <section class="reference">
+                        <a href="resume.pdf" id="dl_btn" class="navi" download>Download</a>
+                        <a href="#contact" id="ct_btn" class="navi">Contact</a>
+                 </section>    
+        </section>
+    </section>
+    <br>
+    <!--about info-->
+    <section id="about">
+        <div class="contentbox" id="container">
+            <section class="leftdiv2">
+                <div class="picDiv">
+                    <img class="selfport" src="images/self.png">
+                </div>
+                <div class="rightdiv">
+                    <section class="about1">
+                        <strong>
+                            <p class="intro "> About Me</p>
+                            <p class="name" >Name: Zen Arthur A. Gavierez</p>
+                            <p class="title">I'm a <span>College Student</span></p>
+                        </strong>
+                    </section>
+                    <section>
+                        <strong>
+                            <p class="about">My motivations is to improving my web development skills and programming skills as a 
+                                3rd year college student to further give me insight into Information Technology. I hope to give myself more knowledge into the course by 
+                                properly initiating myself into a better workflow and learning habit, so that i can be able to graduate as a proper Web Developer and CyberSecurity Administrator in the future.     
+                                 I am currently working on further improving my programming skills as well as progressing my knowledge in cyber security through various courses and accreditaions. 
+                            </p>
+                        </strong>
+                    </section>
+                    <section>
+                        <div class="icons">
+                            <img class="ihtml" src="images/html.png" >
+                            <img class="icss" src="images/css.png" >
+                            <img class="ijs" src="images/js.png" >
+                            <img class="icisco" src="images/cisco.png" > 
+                        </div>
+                        <div class="reference">
+                                <a href="resume.pdf" id="dl_btn" class="navi" download>Download</a>
+                                <a href="#contact" id="ct_btn" class="navi">Contact</a> 
+                        </div>
+                    
+                    </section>   
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    <!--Projects-->
+    <section id="projects">
+
+        <div class="contentbox" id="container">
+        
+            <div class="container">
+                <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                        chevron_left
+                    </button>
+                    <ul class="image-list">
+                    <a href="ex 1.html"><img class="image-item" src="images/img-1.jpg" alt="img-1" /></a>
+                    <a href="ex 2.html"><img class="image-item" src="images/img-2.jpg" alt="img-2" /></a>
+                    <a href="ex 3.html"><img class="image-item" src="images/img-3.jpg" alt="img-3" /></a>
+                    <a href="ex 4.html"><img class="image-item" src="images/img-4.jpg" alt="img-4" /></a>
+                    <a href="ex 5.html"><img class="image-item" src="images/img-5.jpg" alt="img-5" /></a>
+                    <a href="ex 6.html"><img class="image-item" src="images/img-6.jpg" alt="img-6" /></a>
+                    <a href="ex 7.html"><img class="image-item" src="images/img-7.jpg" alt="img-7" /></a>
+                    <a href="ex 8.html"><img class="image-item" src="images/img-8.jpg" alt="img-8" /></a>
+                    <a href="act1.html"><img class="image-item" src="images/img-9.jpg" alt="img-9" /></a>
+                    <a href="act2.html"><img class="image-item" src="images/img-10.jpg" alt="img-10" /></a>
+                    <a href="act3.html"><img class="image-item" src="images/img-11.jpg" alt="img-11" /></a>
+                    <a href="https://origamish1ro.github.io/Working_Calculator/"><img class="image-item" src="images/img-12.jpg" alt="img-12" /></a>
+                    <a href="https://origamish1ro.github.io/Quiz-Application/"><img class="image-item" src="images/img-13.jpg" alt="img-13" /></a>
+                    <a href="https://origamish1ro.github.io/to-do-list-app.github.io/"><img class="image-item" src="images/img-14.jpg" alt="img-14" /></a>
+                    </ul>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
+                        chevron_right
+                    </button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!--Contact info-->
+    <section id="contact">
+        <div class="contentbox" id="container">
+            <section class="contacts">
+                <p> 
+                    <h2>
+                        <a id="contacts" href="https://www.facebook.com/soza.general.3/" 
+                        class="navi" 
+                        target="_blank">Fbook</a>
+        
+                        <a id="contacts" href="mailto:gavierezen2018to2019@gmail.com" 
+                        class="navi" 
+                        target="_blank">Email</a>
+        
+                        <a id="contacts" href="tel:+639958424339" 
+                        class="navi" 
+                        target="_blank">
+                        Number</a>
+                </h2></p>
+            </section>
+            
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">Copyright © 2024 | All Rights Reserved | </p>
+        <p class="developer">Developed by <a href="https://github.com/OrigamiSh1ro" target="_blank">Zen Arthur A. Gavierez</a></p>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+</html>

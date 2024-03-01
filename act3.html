@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        a{margin-left: 42%; 
+            border-radius: .5rem;
+            width: 5rem;
+    height: 3rem;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:black;background-color:white;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: .5;
+    opacity: none;
+        }
+        a:hover{
+           
+            margin-left: 42%; 
+            border-radius: .5rem;
+            width: 5rem;
+    height: 3rem;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:white;background-color:rgb(236, 206, 34);
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: none;
+}
+
+        #box {
+            background-color: green;
+            height: 10rem;
+            width: 10rem;
+            margin-top: 5vh;
+            border-radius: 1rem;
+            margin-left: 40%;
+          
+        }
+        #changecolor {
+            height: 2rem;
+            margin-top: 5vh;
+            border-radius: 1rem;
+            margin-left: 43%;
+            border: none;
+           
+       }
+      
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, #35234b 0%, transparent 70%),
+                radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
+                radial-gradient(ellipse at 100% 20%, #3d54b1 0%, transparent 70%),
+                radial-gradient(ellipse at 100% 100%, #9f3c54 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 100%, #362d6f 0%, transparent 70%);
+            background-blend-mode:screen;
+            display: flex;
+            justify-content: center;
+        }
+        #main{
+
+            height: 85vh;
+            width: 75vw;
+            margin-top: 10vh;
+            border-radius: 2rem;
+            background-color: black;
+            color: white;
+            opacity: 0.9;
+            box-shadow: 5px 10px #888888;
+           
+        }
+        p{
+            opacity: 1;
+        }
+       h1{
+        display:flex;
+        justify-content: center;
+        opacity: 1;
+       }
+       h3{
+        display:flex;
+        justify-content: center;
+        opacity: 1;
+       }
+       
+    </style>
+</head>
+
+    <div id="main">
+<body>
+    
+        <p>
+            <br>
+            <h1>
+                JavaScript colorChanger() Hands-On
+            </h1>
+            <h3> Click on the button to change its colour :3</h3>
+
+          
+            <div id="box">
+
+            </div>
+            <button id="changecolor" onclick="changebtn()"> Change Colour</button>
+            
+        </p>
+        <a href="/index.html" target="_self"> Back </a>
+    </div>
+    
+<script>
+    const colorBox = document.getElementById("box");
+    let changeColor = document.getElementById("changeColor");
+
+    bt1.addEventListener("click", changeColor);
+
+    function changebtn() {
+        if (box.style.backgroundColor === "green") {
+            box.style.backgroundColor = "blue";
+        }
+        else {
+            box.style.backgroundColor = "green";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandsOn1-addEventListener-WS101</title>
+
+    <style>
+       
+        a{margin-left: 42%; 
+            border-radius: .5rem;
+            width: 5rem;
+    height: 3rem;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:black;background-color:white;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: .5;
+    opacity: none;
+        }
+        a:hover{
+          
+            margin-left: 42%; 
+            border-radius: .5rem;
+            width: 5rem;
+    height: 3rem;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    color:white;background-color:rgb(236, 206, 34);
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: none;
+}
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, #35234b 0%, transparent 70%),
+                radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
+                radial-gradient(ellipse at 100% 20%, #3d54b1 0%, transparent 70%),
+                radial-gradient(ellipse at 100% 100%, #9f3c54 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 100%, #362d6f 0%, transparent 70%);
+            background-blend-mode:screen;
+            display: flex;
+            justify-content: center;
+        }
+        #main{
+
+            height: 85vh;
+            width: 75vw;
+            margin-top: 10vh;
+            border-radius: 2rem;
+            background-color: black;
+            color: white;
+            opacity: 0.9;
+            box-shadow: 5px 10px #888888;
+        }
+        p{
+            opacity: 1;
+        }
+       h1{
+        display:flex;
+        justify-content: center;
+        opacity: 1;
+       }
+       h3{
+        display:flex;
+        justify-content: center;
+        opacity: 1;
+       }
+        #options {
+            margin-top: 15vh;
+            display: flex;
+           justify-content: space-evenly;
+        }
+        #bt1{
+            height: 3rem;
+            width: 15rem;
+            color: white;
+            background: linear-gradient(90deg, #35234b, #2975bf);
+            border: solid white 2px;
+            border-radius: 1rem;
+        }
+        #bt2{
+            height: 3rem;
+            width: 15rem;
+            color: white;
+            background: linear-gradient(90deg, #2975bf, #3d54b1 );
+            border: solid white 2px;
+            border-radius: 1rem;
+        }
+        #bt3{
+            height: 3rem;
+            width: 15rem;
+            color: white;
+            background: linear-gradient(90deg, #3d54b1 , #9f3c54);
+            border: solid white 2px;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+   
+   <br>
+   <br>
+   <br>
+    <div id="main">
+        <p>
+            <br>
+            <h1>
+                JavaScript addEventListener() Hands-On
+            </h1>
+            <h3> Press on each button for a result :3</h3>
+
+            <div id="options">
+                <button id="bt1" >Option 1</button>
+                <button id="bt2" >Option 2</button>
+                <button id="bt3" >Option 3</button>
+            </div>
+            
+        </p>
+        <a href="index.html" target="_self"> Back </a>
+    </div>
+    <script>
+        
+        let btn1 = document.getElementById('bt1');
+        let btn2 = document.getElementById('bt2');
+        let btn3 = document.getElementById('bt3');
+
+        bt1.addEventListener('click', myfunction);
+        bt2.addEventListener('click', myfunction2);
+        bt3.addEventListener('click', myfunction3);
+
+        function myfunction(){
+            window.alert(`           
+                        ============BUTTON 1 PRESSED=============
+                        ⠉⠉⠉⣿⡿⠿⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣻⣩⣉⠉⠉
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⣀⣀⣀⣀⡀⠄⠄⠉⠉⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⠄⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⢤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⠄⠄
+                        ⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠄⠉⠉⠉⣋⠉⠉⠉⠉⠉⠉⠉⠉⠙⠛⢷⡀⠄⠄
+                        ⣿⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⣾⣿⣷⣄⣀⣀⣀⣠⣄⣢⣤⣤⣾⣿⡀⠄
+                        ⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣹⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⢟⢁⣠
+                        ⣿⣿⣄⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⣉⣉⣰⣿⣿⣿⣿⣷⣥⡀⠉⢁⡥⠈
+                        ⣿⣿⣿⢹⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠒⠛⠛⠋⠉⠉⠛⢻⣿⣿⣷⢀⡭⣤⠄
+                        ⣿⣿⣿⡼⣿⠷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣠⣿⣟⢷⢾⣊⠄⠄
+                        ⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⣈⣉⣭⣽⡿⠟⢉⢴⣿⡇⣺⣿⣷
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠐⢊⣡⣴⣾⣥⣿⣿⣿`);
+          
+        }
+        function myfunction2(){
+            window.alert(`
+                        ============BUTTON 2 PRESSED=============
+                        ⠉⠉⠉⣿⡿⠿⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣻⣩⣉⠉⠉
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⣀⣀⣀⣀⡀⠄⠄⠉⠉⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⠄⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⢤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⠄⠄
+                        ⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠄⠉⠉⠉⣋⠉⠉⠉⠉⠉⠉⠉⠉⠙⠛⢷⡀⠄⠄
+                        ⣿⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⣾⣿⣷⣄⣀⣀⣀⣠⣄⣢⣤⣤⣾⣿⡀⠄
+                        ⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣹⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⢟⢁⣠
+                        ⣿⣿⣄⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⣉⣉⣰⣿⣿⣿⣿⣷⣥⡀⠉⢁⡥⠈
+                        ⣿⣿⣿⢹⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠒⠛⠛⠋⠉⠉⠛⢻⣿⣿⣷⢀⡭⣤⠄
+                        ⣿⣿⣿⡼⣿⠷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣠⣿⣟⢷⢾⣊⠄⠄
+                        ⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⣈⣉⣭⣽⡿⠟⢉⢴⣿⡇⣺⣿⣷
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠐⢊⣡⣴⣾⣥⣿⣿⣿`);
+              
+        }
+        function myfunction3(){
+            window.alert(`           
+                        ============BUTTON 3 PRESSED=============
+                        ⠉⠉⠉⣿⡿⠿⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣻⣩⣉⠉⠉
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⣀⣀⣀⣀⡀⠄⠄⠉⠉⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⠄⠄⠄⠄
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⢤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⠄⠄
+                        ⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠄⠉⠉⠉⣋⠉⠉⠉⠉⠉⠉⠉⠉⠙⠛⢷⡀⠄⠄
+                        ⣿⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠠⣾⣿⣷⣄⣀⣀⣀⣠⣄⣢⣤⣤⣾⣿⡀⠄
+                        ⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣹⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⢟⢁⣠
+                        ⣿⣿⣄⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⣉⣉⣰⣿⣿⣿⣿⣷⣥⡀⠉⢁⡥⠈
+                        ⣿⣿⣿⢹⣇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠒⠛⠛⠋⠉⠉⠛⢻⣿⣿⣷⢀⡭⣤⠄
+                        ⣿⣿⣿⡼⣿⠷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣠⣿⣟⢷⢾⣊⠄⠄
+                        ⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⣈⣉⣭⣽⡿⠟⢉⢴⣿⡇⣺⣿⣷
+                        ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠐⢊⣡⣴⣾⣥⣿⣿⣿`);
+           
+        }
+    </script>
+</body>
+</html>
